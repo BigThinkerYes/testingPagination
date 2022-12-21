@@ -4,11 +4,6 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { FavoritesContext } from './FavoritesProvider';
 import Col from "react-bootstrap/Col";
-import Images from './Images';
-
-//paginate
-import './Style/paginate.css';
-
 
 
 function UserCard({ id, url, name, userFilteredList }) {
@@ -17,15 +12,11 @@ function UserCard({ id, url, name, userFilteredList }) {
 
   const [user, setUser] = useState(null);
 
-  //paginate
-  const [images, setImages] = useState([]);
-
   const fetchUser = async () => {
     // render the first page of 50 characters (array of id, name, image, url)
     const res = await fetch(url);
     const data = await res.json();
     setUser(data);
-    setImages(data);
     console.log(user)
   };
 
@@ -51,7 +42,6 @@ function UserCard({ id, url, name, userFilteredList }) {
                       </div>
                     </div>
                 </div>
-              
               <div className="d-flex justify-content-center mt-3">
                 {isFavorite(name) ? (
                   <Button onClick={() => removeFavorite(name)} variant="danger" >

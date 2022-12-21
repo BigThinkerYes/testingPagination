@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./Home.css";
 import disney from '../public/disney.jpg';
+import Image from "../components/Image";
 
 
 function Home({userList, userFilteredList, setUserFilteredList}) {
@@ -52,6 +53,7 @@ function Home({userList, userFilteredList, setUserFilteredList}) {
             </Col>
           ))}
         </Row>
+        <Image data={userList} />
       </Container>
       
       

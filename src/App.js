@@ -5,6 +5,8 @@ import { Home } from './routes/Home';
 import { UserDetails } from './routes/UserDetails';
 import { FavCharacters } from './routes/FavCharacters';
 import { FavoritesProvider } from './components/FavoritesProvider';
+//const disneyCharApi = `https://api.disneyapi.dev/characters?page=${page}`;
+
 
 
 // const maxUsers = 20;
